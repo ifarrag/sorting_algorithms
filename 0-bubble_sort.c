@@ -2,8 +2,8 @@
 #include <stdbool.h>
 /**
  * bubble_sort - Sort array in ascending
- * array: Pointer to array to sort
- * size: The size to sort in the array
+ * @array: Pointer to array to sort
+ * @size: The size to sort in the array
  */
 void bubble_sort(int *array, size_t size)
 {
@@ -11,7 +11,7 @@ void bubble_sort(int *array, size_t size)
 	int temp = 0;
 	bool sw = 0;
 
-	while (!array)
+	while (array)
 	{
 		if (i == size && sw == 1)
 		{
