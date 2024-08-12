@@ -39,6 +39,8 @@ void insertion_sort_list(listint_t **list)
 				print_list(nlist);
 				break;
 			}
+			while (!(*list)->prev)
+				*list = (*list)->prev;
 			print_list(*list);
 		}
 	}
