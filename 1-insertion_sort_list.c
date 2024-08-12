@@ -25,13 +25,13 @@ void insertion_sort_list(listint_t **list)
 			tempp = nlist->prev;
 			if (tempn)
 				tempn->prev = tempp;
-			nlist->next = nlist->prev;
-			nlist->prev = nlist->prev->prev;
+			nlist->next = tempp;
+			nlist->prev = tempp->prev;
 			tempp->next = tempn;
 			tempp->prev = nlist;
 			if (nlist->prev)
 				nlist->prev->next = nlist;
-			print_list(list);
+			print_list(*list);
 		}
 	}
 }
