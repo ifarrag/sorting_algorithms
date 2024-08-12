@@ -16,9 +16,10 @@ void selection_sort(int *array, size_t size)
 	{
 		i = y + 1;
 		val = false;
+		ival = array[y];
 		while (i < size)
 		{
-			if (array[y] > array[i])
+			if (ival > array[i])
 			{
 				ival = array[i];
 				x = i;
