@@ -5,10 +5,11 @@
  */
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *tempn, *tempp, *nlist, *tlist;
+	listint_t *tempn, *tempp, *nlist, *tlist, *show;
 
 	if (list)
 	{
+		show = *list;
 		nlist = *list;
 		tlist = *list;
 	}
@@ -39,9 +40,9 @@ void insertion_sort_list(listint_t **list)
 				print_list(nlist);
 				break;
 			}
-			while (!(*list)->prev)
-				*list = (*list)->prev;
-			print_list(*list);
+			while (!show->prev)
+				show = show->prev;
+			print_list(show);
 		}
 	}
 }
