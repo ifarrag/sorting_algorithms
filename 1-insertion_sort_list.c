@@ -6,9 +6,17 @@
 void insertion_sort_list(listint_t **list)
 {
 	listint_t *tempn, *tempp;
-	listint_t *nlist = *list;
+	listint_t *nlist;
 
-	while (nlist->next)
+	if (list)
+	{
+		nlist = *list;
+	}
+	else
+	{
+		nlist = NULL;
+	}
+	while (nlist)
 	{
 		nlist = nlist->next;
 		while (nlist->n < nlist->prev->n)
