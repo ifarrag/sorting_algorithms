@@ -41,7 +41,7 @@ void insertion_sort_list(listint_t **list)
 				break;
 			}
 			show = nlist;
-			while (!show->prev)
+			while (show->prev)
 				show = show->prev;
 			print_list(show);
 		}
