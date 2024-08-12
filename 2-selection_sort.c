@@ -8,12 +8,14 @@
  */
 void selection_sort(int *array, size_t size)
 {
-	size_t i = 1, y = 0, x = 0;
+	size_t i = 0, y = 0, x = 0;
 	int temp = 0, ival = 0;
 	bool val = false;
 
-	while(array && y < size)
+	while (array && y < size)
 	{
+		i = y + 1;
+		val = false;
 		while (i < size)
 		{
 			if (array[y] > array[i])
@@ -27,7 +29,6 @@ void selection_sort(int *array, size_t size)
 
 		if (val == true)
 		{
-			val = false;
 			temp = array[y];
 			array[y] = ival;
 			array[x] = temp;
@@ -35,6 +36,5 @@ void selection_sort(int *array, size_t size)
 			print_array(array, size);
 		}
 		y++;
-		i = y + 1;
 	}
 }
