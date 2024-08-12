@@ -35,11 +35,6 @@ void insertion_sort_list(listint_t **list)
 			{
 				nlist->prev->next = nlist;
 			}
-			else
-			{
-				print_list(nlist);
-				break;
-			}
 			while (!show->prev)
 				show = show->prev;
 			print_list(show);
