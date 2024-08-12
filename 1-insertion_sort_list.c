@@ -38,11 +38,9 @@ void insertion_sort_list(listint_t **list)
 			else
 			{
 				print_list(nlist);
+				show = nlist;
 				break;
 			}
-			show = nlist;
-			while (show->prev)
-				show = show->prev;
 			print_list(show);
 		}
 	}
