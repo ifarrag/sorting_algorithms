@@ -52,5 +52,7 @@ void q_s(int *Arr, int *low, int *high, size_t size)
 
 void quick_sort(int *array, size_t size)
 {
+	if (size == 0 || array == NULL)
+		return;
 	q_s(array, &array[0], &array[size - 1], size);
 }
