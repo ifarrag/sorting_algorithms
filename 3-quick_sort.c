@@ -9,14 +9,14 @@
 
 void q_s(int *Arr, size_t low, size_t high, size_t size)
 {
-	int *i, *j, *pivot;
-	int tmp;
+	size_t *i, *j, *pivot;
+	size_t tmp;
 
 	if (low >= high)
 		return;
 
-	*i = Arr[low];
-	*j = Arr[low];
+	i = &Arr[low];
+	j = &Arr[low];
 	*pivot = Arr[high];
 	for (; j != &Arr[high]; j++)
 	{
@@ -27,7 +27,7 @@ void q_s(int *Arr, size_t low, size_t high, size_t size)
 				tmp = *i;
 				*i = *j;
 				*j = tmp;
-				print_array(Arr, size);
+				print_array(&Arr, size);
 			}
 			i++;
 		}
@@ -37,8 +37,8 @@ void q_s(int *Arr, size_t low, size_t high, size_t size)
 	*i = *pivot;
 	*pivot = tmp;
 
-	q_s(Arr, low, --i, size);
-	q_s(Arr, ++i, high, size);
+	q_s(&Arr, low, --i, size);
+	q_s(&Arr, ++i, high, size);
 }
 /**
  * quick_sort - the Quick sort Algo
@@ -48,6 +48,6 @@ void q_s(int *Arr, size_t low, size_t high, size_t size)
 
 void quick_sort(int *array, size_t size)
 {
-	q_s(array, 0, size - 1, size);
+	q_s(&array, 0, size - 1, size);
 	return;
 }
