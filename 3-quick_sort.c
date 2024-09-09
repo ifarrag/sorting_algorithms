@@ -39,6 +39,7 @@ void q_s(int *Arr, int *low, int *high, size_t size)
 
 	q_s(Arr, low, --i, size);
 	q_s(Arr, ++i, high, size);
+	return;
 }
 /**
  * quick_sort - the Quick sort Algo
