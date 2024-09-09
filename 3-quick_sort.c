@@ -17,7 +17,7 @@ void q_s(int *Arr, int *low, int *high, size_t size)
 
 	i = low;
 	j = low;
-	*pivot = high;
+	pivot = high;
 	for (; j != high; j++)
 	{
 		if (*j <= *pivot)
