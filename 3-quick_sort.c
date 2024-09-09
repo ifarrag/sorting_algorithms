@@ -7,7 +7,7 @@
  * @size: size of the array
  */
 
-void q_s(int *Arr, int low, int high, size_t size)
+void q_s(int *Arr, int *low, int *high, size_t size)
 {
 	int *i, *j, *pivot;
 	int tmp;
@@ -15,10 +15,10 @@ void q_s(int *Arr, int low, int high, size_t size)
 	if (low >= high)
 		return;
 
-	i = &Arr[low];
-	j = &Arr[low];
-	*pivot = Arr[high];
-	for (; j != &Arr[high]; j++)
+	i = low;
+	j = low;
+	*pivot = high;
+	for (; j != high; j++)
 	{
 		if (*j <= *pivot)
 		{
@@ -48,6 +48,6 @@ void q_s(int *Arr, int low, int high, size_t size)
 
 void quick_sort(int *array, size_t size)
 {
-	q_s(&array, (int)0, (int)size - 1, size);
+	q_s(array, &array[0], &array[size], size);
 	return;
 }
