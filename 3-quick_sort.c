@@ -27,7 +27,7 @@ void q_s(int *Arr, int low, int high, size_t size)
 				tmp = *i;
 				*i = *j;
 				*j = tmp;
-				print_array(&Arr, size);
+				print_array(Arr, size);
 			}
 			i++;
 		}
@@ -37,8 +37,8 @@ void q_s(int *Arr, int low, int high, size_t size)
 	*i = *pivot;
 	*pivot = tmp;
 
-	q_s(&Arr, low, --i, size);
-	q_s(&Arr, ++i, high, size);
+	q_s(Arr, low, --i, size);
+	q_s(Arr, ++i, high, size);
 }
 /**
  * quick_sort - the Quick sort Algo
