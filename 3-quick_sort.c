@@ -12,7 +12,7 @@ void q_s(int *Arr, size_t low, size_t high, size_t size)
 	int *i, *j, *pivot;
 	int tmp;
 
-	if (low >= high || low < 0)
+	if (low >= high)
 		return;
 
 	*i = Arr[low];
@@ -22,7 +22,7 @@ void q_s(int *Arr, size_t low, size_t high, size_t size)
 	{
 		if (*j <= *pivot)
 		{
-			if (i =! j)
+			if (i != j)
 			{
 				tmp = *i;
 				*i = *j;
